@@ -1,10 +1,14 @@
+:root {
+  --dark-accent: black;
+  --main-color: #f3e5ab;
+}
+
 * {
-  background-color: #607f7c;
-  box-sizing: border-box;
+  background-color: #475f5d;
 }
 
 body {
-  color: #f3e5ab;
+  color: var(--main-color);
   font-family: "League Script", "La Belle Aurore", serif;
 }
 
@@ -13,16 +17,28 @@ section {
 }
 
 section:not(.home) {
-  border-top: 5px double #f3e5ab;
+  /* border-top: 5px double black; */
+  box-shadow: 0 0 8px;
+  padding: 5px;
+  border-radius: 15px;
 }
 
 h2 {
   margin: 5px 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 p {
+  font-size: 1.5rem;
   font-family: "Bad Script", serif;
+}
+
+a {
+  color: var(--main-color);
+}
+
+a:hover {
+  color: var(--dark-accent);
 }
 
 /* NAVIGATION STYLES START */
@@ -39,15 +55,10 @@ nav ul {
 nav ul li {
   margin: 25px 10px;
   display: inline;
-  padding: 3px;
-}
-
-nav ul li:hover {
-  border: 5px double #f3e5ab;
+  padding: 10px;
 }
 
 nav ul li a {
-  color: black;
   font-size: 24px;
   font-weight: bolder;
   text-decoration: none;
@@ -65,7 +76,7 @@ nav ul li a {
 
 .home img {
   border-radius: 250em;
-  box-shadow: 0 0 50px #f3e5ab;
+  box-shadow: 0 0 50px var(--main-color);
   margin: 0 50px;
 }
 
@@ -73,7 +84,7 @@ nav ul li a {
   display: block;
   letter-spacing: 2px;
   line-height: 1.2;
-  font-family: "Bad Script", serif;
+  font-family: "Carattere", "Bad Script", serif;
 }
 
 .home h1 {
@@ -88,7 +99,7 @@ nav ul li a {
 
 
 /* ABOUT STYLES START */
-
+/* placeholder */
 /* ABOUT STYLES END */
 
 
@@ -101,6 +112,10 @@ nav ul li a {
   max-width: 50%;
   height: auto;
   border-radius: 25px;
+}
+
+.work img:hover {
+  box-shadow: 0 0 15px var(--dark-accent);
 }
 
 .first-project img {
@@ -129,11 +144,15 @@ nav ul li a {
   text-decoration: none;
   color: white;
 }
+
+.project-container a:hover {
+  color: var(--dark-accent);
+}
 /* WORK STYLES END */
 
 
 /* CONTACT STYLES START */
-
+/* placeholder */
 /* CONTACT STYLES END */
 
 
@@ -143,6 +162,7 @@ footer {
   letter-spacing: 2px;
   text-align: center;
   margin: 3%;
+  color: black;
 }
 /* FOOTER STYLES END */
 
@@ -151,7 +171,7 @@ footer {
 
 
 /* MEDIA QUERIES FOR TABLETS AND SMALLER */
-/* make images full width of viewport */
+/* make first project images full width of viewport and all others 80% */
 
 /* MEDIA QUERIES FOR MOBILE PHONES AND SMALLER */
-/* make images full-width of viewport */
+/* make first project images full width of viewport and all others 80% */
