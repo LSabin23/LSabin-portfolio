@@ -26,6 +26,7 @@ section:not(.home) {
 h2 {
   margin: 5px 0;
   font-size: 2.5rem;
+  text-shadow: 2px 2px var(--dark-accent);
 }
 
 p {
@@ -62,6 +63,7 @@ nav ul li a {
   font-size: 24px;
   font-weight: bolder;
   text-decoration: none;
+  text-shadow: 2px 2px var(--dark-accent);
 }
 /* NAVIGATION STYLES END */
 
@@ -71,7 +73,6 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.5rem;
 }
 
 .home img {
@@ -85,10 +86,12 @@ nav ul li a {
   letter-spacing: 2px;
   line-height: 1.2;
   font-family: "Carattere", "Bad Script", serif;
+  font-size: 2.5rem;
 }
 
 .home h1 {
   margin-bottom: 1px;
+  text-shadow: 2px 2px var(--dark-accent);
 }
 
 .home p {
@@ -168,10 +171,24 @@ footer {
 
 
 /* MEDIA QUERIES FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
 
+}
 
 /* MEDIA QUERIES FOR TABLETS AND SMALLER */
 /* make first project images full width of viewport and all others 80% */
+@media screen and (max-width: 768px) {
+  
+}
 
 /* MEDIA QUERIES FOR MOBILE PHONES AND SMALLER */
 /* make first project images full width of viewport and all others 80% */
+@media screen and (max-width: 575px) {
+  .home {
+    display: block;
+  }
+    
+  .home img {
+    max-width: 50%;
+  }
+}
