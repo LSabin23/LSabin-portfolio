@@ -6,22 +6,26 @@ body {
   color: #f3e5ab;
 }
 
+section, footer {
+  margin: 3%;
+  border-bottom: 10px groove #f3e5ab;
+}
+
+/* NAVIGATION STYLES START */
 header {
   display: flex;
-  justify-content: space-between;
-  height: 100%;
-  position: sticky;
+  justify-content: space-around;
   font-family: "League Script", Sofia, serif;
 }
 
 nav ul {
   list-style-type: none;
-  flex-direction: column;
-  padding: 0 0 0 0;
+  flex-wrap: wrap;
 }
 
 nav ul li {
   margin: 25px 10px;
+  display: inline;
 }
 
 nav ul li a {
@@ -30,3 +34,55 @@ nav ul li a {
   font-weight: bolder;
   text-decoration: none;
 }
+/* NAVIGATION STYLES END */
+
+
+/* HERO STYLES START */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0.5;
+}
+
+.home img {
+  border-radius: 250em;
+  box-shadow: 0 0 50px #f3e5ab;
+  margin: 0 25px;
+}
+
+span {
+  font-style: italic;
+}
+
+/* HERO STYLES END */
+
+
+/* ABOUT STYLES START */
+
+/* ABOUT STYLES END */
+
+
+/* WORK STYLES START */
+
+/* WORK STYLES END */
+
+
+/* CONTACT STYLES START */
+
+/* CONTACT STYLES END */
+
+
+/* FOOTER STYLES START */
+
+/* FOOTER STYLES END */
+
+
+/* MEDIA QUERIES FOR SMALLER DESKTOP SCREENS AND SMALLER */
+
+
+/* MEDIA QUERIES FOR TABLETS AND SMALLER */
+
+
+/* MEDIA QUERIES FOR MOBILE PHONES AND SMALLER */
+
