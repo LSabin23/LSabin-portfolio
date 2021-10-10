@@ -1,5 +1,6 @@
 * {
   background-color: #607f7c;
+  box-sizing: border-box;
 }
 
 body {
@@ -7,11 +8,20 @@ body {
   font-family: "League Script", "La Belle Aurore", serif;
 }
 
-section, footer {
+section {
   margin: 3%;
 }
 
-section p {
+section:not(.home) {
+  border-top: 5px double #f3e5ab;
+}
+
+h2 {
+  margin: 5px 0;
+  font-size: 2rem;
+}
+
+p {
   font-family: "Bad Script", serif;
 }
 
@@ -29,6 +39,11 @@ nav ul {
 nav ul li {
   margin: 25px 10px;
   display: inline;
+  padding: 3px;
+}
+
+nav ul li:hover {
+  border: 5px double #f3e5ab;
 }
 
 nav ul li a {
@@ -78,7 +93,42 @@ nav ul li a {
 
 
 /* WORK STYLES START */
+.work-note {
+  font-size: smaller;
+}
 
+.work img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 25px;
+}
+
+.first-project img {
+  max-width: 80%;
+  height: auto;
+}
+
+.project-container {
+  position: relative;
+  text-align: left;
+}
+
+.project-container p {
+  position: absolute;
+  margin-bottom: 8px;
+  bottom: 5px;
+  left: 16px;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.project-container a {
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+}
 /* WORK STYLES END */
 
 
@@ -88,7 +138,12 @@ nav ul li a {
 
 
 /* FOOTER STYLES START */
-
+footer {
+  font-family: "Bad Script", serif;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 3%;
+}
 /* FOOTER STYLES END */
 
 
@@ -96,7 +151,7 @@ nav ul li a {
 
 
 /* MEDIA QUERIES FOR TABLETS AND SMALLER */
-
+/* make images full width of viewport */
 
 /* MEDIA QUERIES FOR MOBILE PHONES AND SMALLER */
-
+/* make images full-width of viewport */
