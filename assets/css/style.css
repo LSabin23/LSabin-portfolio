@@ -1,10 +1,11 @@
 :root {
   --dark-accent: black;
   --main-color: #f3e5ab;
+  --bkgrnd-color: #475f5d
 }
 
 * {
-  background-color: #475f5d;
+  background-color: var(--bkgrnd-color);
 }
 
 body {
@@ -17,7 +18,6 @@ section {
 }
 
 section:not(.home) {
-  /* border-top: 5px double black; */
   box-shadow: 0 0 8px;
   padding: 5px;
   border-radius: 15px;
@@ -40,17 +40,17 @@ a {
 
 a:hover {
   color: var(--dark-accent);
+  text-shadow: none;
 }
 
 /* NAVIGATION STYLES START */
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 nav ul {
   list-style-type: none;
-  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -86,12 +86,12 @@ nav ul li a {
   letter-spacing: 2px;
   line-height: 1.2;
   font-family: "Carattere", "Bad Script", serif;
-  font-size: 2.5rem;
 }
 
 .home h1 {
   margin-bottom: 1px;
   text-shadow: 2px 2px var(--dark-accent);
+  font-size: 2.5rem;
 }
 
 .home p {
@@ -123,9 +123,9 @@ nav ul li a {
 
 .first-project img {
   max-width: 80%;
-  height: auto;
 }
 
+/* parents of absolutely positioned elements need position: relative|absolute */
 .project-container {
   position: relative;
   text-align: left;
@@ -172,23 +172,62 @@ footer {
 
 /* MEDIA QUERIES FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
+  .work img {
+    max-width: 80%;
+  }
 
+  .first-project img {
+    max-width: 100%;
+  }
 }
 
 /* MEDIA QUERIES FOR TABLETS AND SMALLER */
-/* make first project images full width of viewport and all others 80% */
 @media screen and (max-width: 768px) {
-  
-}
+  h2 {
+    font-size: 2rem;
+  }
+   
+  h3 {
+    font-size: 1rem;
+  }
 
-/* MEDIA QUERIES FOR MOBILE PHONES AND SMALLER */
-/* make first project images full width of viewport and all others 80% */
-@media screen and (max-width: 575px) {
+  p {
+    font-size: 1rem;
+  }
+  
   .home {
     display: block;
+    text-align: center;
   }
     
   .home img {
     max-width: 50%;
+  }
+
+  .home h1 {
+    font-size: 2.3rem;
+  }
+
+  .home p {
+    font-size: 1rem;
+  }
+}
+
+/* MEDIA QUERIES FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  .project-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .project-container p {
+    color: var(--main-color);
+    background-color: var(--bkgrnd-color);
+    position: static;
+    text-shadow: 2px 2px var(--dark-accent);
+  }
+
+  .project-container a {
+    color: var(--main-color);
   }
 }
