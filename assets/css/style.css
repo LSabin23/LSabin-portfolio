@@ -1,7 +1,9 @@
 :root {
   --dark-accent: black;
   --main-color: #f3e5ab;
-  --bkgrnd-color: #475f5d
+  --bkgrnd-color: #475f5d;
+  --txt-shadow-horiz: 2px;
+  --txt-shadow-vert: 2px;
 }
 
 * {
@@ -26,7 +28,7 @@ section:not(.home) {
 h2 {
   margin: 5px 0;
   font-size: 2.5rem;
-  text-shadow: 2px 2px var(--dark-accent);
+  text-shadow: var(--txt-shadow-horiz) var(--txt-shadow-vert) var(--dark-accent);
 }
 
 p {
@@ -63,7 +65,7 @@ nav ul li a {
   font-size: 24px;
   font-weight: bolder;
   text-decoration: none;
-  text-shadow: 2px 2px var(--dark-accent);
+  text-shadow: var(--txt-shadow-horiz) var(--txt-shadow-vert) var(--dark-accent);
 }
 /* NAVIGATION STYLES END */
 
@@ -90,7 +92,7 @@ nav ul li a {
 
 .home h1 {
   margin-bottom: 1px;
-  text-shadow: 2px 2px var(--dark-accent);
+  text-shadow: var(--txt-shadow-horiz) var(--txt-shadow-vert) var(--dark-accent);
   font-size: 2.5rem;
 }
 
@@ -165,7 +167,7 @@ footer {
   letter-spacing: 2px;
   text-align: center;
   margin: 3%;
-  color: black;
+  color: var(--dark-accent);
 }
 /* FOOTER STYLES END */
 
@@ -187,14 +189,10 @@ footer {
     font-size: 2rem;
   }
    
-  h3 {
+  h3, p {
     font-size: 1rem;
   }
 
-  p {
-    font-size: 1rem;
-  }
-  
   .home {
     display: block;
     text-align: center;
@@ -240,7 +238,7 @@ footer {
     color: var(--main-color);
     background-color: var(--bkgrnd-color);
     position: static;
-    text-shadow: 2px 2px var(--dark-accent);
+    text-shadow: var(--txt-shadow-horiz) var(--txt-shadow-vert) var(--dark-accent);
   }
 
   .project-container a {
